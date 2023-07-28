@@ -10,7 +10,7 @@ const apiUrl = 'https://apis.ccbp.in/crypto-currency-converter'
 
 class CryptocurrencyTracker extends Component {
   state = {
-    cryptocurrenciesDate: [],
+    cryptocurrenciesData: [],
     isLoading: true,
   }
 
@@ -36,11 +36,11 @@ class CryptocurrencyTracker extends Component {
   renderCryptocurrenciesList = () => {
     const {cryptocurrenciesData} = this.state
 
-    return <cryptocurrenciesList cryptocurrenciesData={cryptocurrenciesData} />
+    return <CryptocurrenciesList cryptocurrenciesData={cryptocurrenciesData} />
   }
 
   renderLoader = () => (
-    <div data- testid="Loader">
+    <div data-testid="Loader">
       <Loader type="Rings" color="#ffffff" height={80} width={80} />
     </div>
   )
